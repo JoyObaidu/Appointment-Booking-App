@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 export default function Hero() {
   return (
     <section className="relative bg-linear-to-r from-blue-600 to-indigo-700 text-white">
@@ -11,7 +10,8 @@ export default function Hero() {
             Transform Your Life with Online Coaching
           </h1>
           <p className="text-lg md:text-xl text-gray-100">
-            Schedule one-on-one sessions with expert coaches and start achieving your goals today.
+            Schedule one-on-one sessions with expert coaches and start achieving
+            your goals today.
           </p>
           <div className="flex space-x-4">
             <a
@@ -30,19 +30,32 @@ export default function Hero() {
         </div>
 
         {/* Right Column (Image placeholder) */}
-        <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-          <div className="w-80 h-80 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-            <span className="text-xl font-semibold"><Image
-  src="/assets/images/dots.png"
-  alt="Hero Image"
-  width={320}
-  height={320}
-  className="rounded-xl w-full max-w-xs md:max-w-md"
-/>
-</span>
+        <div className="md:w-1/2 mt-12 md:mt-0 relative flex justify-center rounded-b-4xl">
+          {/* Dots background */}
+          <div className="w-80 h-80 absolute items-center justify-center" style={{ top: '20px', left: '180px' }}>
+            <span className="text-xl font-semibold">
+              <Image
+                src="/assets/images/dots.png"
+                alt="Hero image Background"
+                width={100}
+                height={100}
+                className="rounded-xl w-32 h-32"
+              />
+            </span>
+          </div>
+          {/* Hero Image sits on dots bg */}
+          <div className="w-80 h-80 flex relative z-2 items-center justify-center">
+            <span className="text-xl font-semibold">
+              <Image
+                src="/assets/images/HeroImg.png"
+                alt="Hero image Background"
+                width={320}
+                height={320}
+                className="rounded-xl w-full max-w-xs md:max-w-md"
+              />
+            </span>
           </div>
         </div>
-
       </div>
     </section>
   );
