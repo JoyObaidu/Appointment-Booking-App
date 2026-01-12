@@ -20,7 +20,7 @@
 
 
 ## Day 2
-**Date:** 2026-01-06  
+**Date:** 2026-01-12  
 **Project:** Online Coaching / Consultation Booking App  
 **Tech Stack:** Next.js, Tailwind CSS  
 
